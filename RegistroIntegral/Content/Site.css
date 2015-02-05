@@ -22,3 +22,45 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.contenedor-page{
+    background-color:rgba(19, 49, 82, 0.82);
+
+}
+
+.encabezado{
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    color:white;
+    padding-left:10px;
+}
+
+.cuerpo{
+    border: 1px solid;
+    margin:0 auto;
+    /*padding:15px;*/
+}
+
+
+#menu-lateral-principal{
+    padding:15px;
+    border-right:1px solid;
+    background-color:#808080;
+}
+
+#contenedor-principal{
+    padding:15px;
+    background-color:white;
+}
+
+
+.container .row .cuerpo{
+    display: table;
+    width:100%;
+}
+
+.container .row .cuerpo [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
