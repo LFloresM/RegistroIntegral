@@ -159,9 +159,21 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlumnoController.cs" />
+    <Compile Include="Controllers\AulaController.cs" />
+    <Compile Include="Controllers\CalificacionController.cs" />
+    <Compile Include="Controllers\Compromiso_de_PagoController.cs" />
+    <Compile Include="Controllers\ConceptoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Horario_por_AulaController.cs" />
+    <Compile Include="Controllers\Horario_por_CursoController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MenuBarController.cs" />
+    <Compile Include="Controllers\ModuloController.cs" />
+    <Compile Include="Controllers\Plan_de_EstudioController.cs" />
+    <Compile Include="Controllers\ProfesorController.cs" />
+    <Compile Include="Controllers\Registro_MatriculaController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -230,6 +242,18 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\MenuBar\MenuBar.cshtml" />
+    <Content Include="Views\Alumno\Alumno.cshtml" />
+    <Content Include="Views\Aula\Aula.cshtml" />
+    <Content Include="Views\Concepto\Concepto.cshtml" />
+    <Content Include="Views\Modulo\Modulo.cshtml" />
+    <Content Include="Views\Plan_de_Estudio\Plan_de_Estudio.cshtml" />
+    <Content Include="Views\Usuario\Usuario.cshtml" />
+    <Content Include="Views\Profesor\Profesor.cshtml" />
+    <Content Include="Views\Compromiso_de_Pago\Compromiso_de_Pago.cshtml" />
+    <Content Include="Views\Horario_por_Aula\Horario_por_Aula.cshtml" />
+    <Content Include="Views\Horario_por_Curso\Horario_por_Curso.cshtml" />
+    <Content Include="Views\Calificacion\Calificacion.cshtml" />
+    <Content Include="Views\Registro_Matricula\Registro_Matricula.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
