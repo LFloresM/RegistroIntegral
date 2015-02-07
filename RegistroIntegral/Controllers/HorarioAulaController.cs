@@ -6,12 +6,12 @@ using System.Web.Mvc;
 
 namespace RegistroIntegral.Controllers
 {
-    public class Compromiso_de_PagoController : Controller
+    public class HorarioAulaController : Controller
     {
-        // GET: Compromiso_de_Pago
+        // GET: HorarioAula
         public ActionResult Index()
         {
-            return PartialView("Compromiso_de_Pago");
+            return View();
         }
     }
 }

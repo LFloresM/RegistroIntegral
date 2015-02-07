@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace RegistroIntegral.Controllers
 {
-    public class Registro_MatriculaController : Controller
+    public class PlanEstudioController : Controller
     {
-        // GET: Registro_Matricula
+        // GET: PlanEstudio
         public ActionResult Index()
         {
             return View();

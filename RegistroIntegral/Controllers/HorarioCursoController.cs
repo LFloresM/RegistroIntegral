@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace RegistroIntegral.Controllers
 {
-    public class Horario_por_CursoController : Controller
+    public class HorarioCursoController : Controller
     {
-        // GET: Horario_por_Curso
+        // GET: HorarioCurso
         public ActionResult Index()
         {
             return View();
