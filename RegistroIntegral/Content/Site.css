@@ -43,9 +43,10 @@ textarea {
 
 
 #menu-lateral-principal{
-    padding:15px;
+    padding:0;
     border-right:1px solid;
     background-color:#808080;
+   
 }
 
 #contenedor-principal{
@@ -63,4 +64,19 @@ textarea {
     float: none;
     display: table-cell;
     vertical-align: top;
+}
+
+.links a{
+    text-decoration:none;
+}
+.links:hover{
+    background-color:#ddd;
+}
+.panel-body{
+    padding-left: 5px;
+
+}
+.panel-body ul{
+    padding-left:10px;
+
 }
