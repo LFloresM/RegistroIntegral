@@ -24,30 +24,72 @@ textarea {
 }
 
 .contenedor-page{
-    background-color:rgba(19, 49, 82, 0.82);
+    border:1px solid;
+    background-color:#083a44;
 
 }
 
 .encabezado{
-    border-right: 1px solid black;
-    border-left: 1px solid black;
     color:white;
     padding-left:10px;
 }
 
 .cuerpo{
-    border: 1px solid;
+    /*border: 1px solid;*/
     margin:0 auto;
+    height:600px;
     /*padding:15px;*/
 }
 
 
 #menu-lateral-principal{
-    padding:0;
-    border-right:1px solid;
+    border-top:0px;
+    padding:15px;
+}
+
+
+#MenuBarContainer .panel-heading{
     background-color:#808080;
+}
+
+#MenuBarContainer .panel-title a{
+    color:whitesmoke;
+    font-size:20px;
+    text-decoration:none;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+#MenuBarContainer .panel.panel-default{
+    border:0px;
+    border-radius:0px;
+}
+
+
+#MenuBarContainer .panel-body{
+    border:0px;
+    padding:0px;
+    margin-top:15px;
+    margin-bottom:15px;
+    
    
 }
+
+#MenuBarContainer .panel-body a{
+    margin-left:20px;
+    text-decoration:none;
+    
+}
+
+
+#MenuBarContainer .panel-body span{
+    color:#02252c;
+    font-size:17px;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+
 
 #contenedor-principal{
     padding:15px;
@@ -66,19 +108,11 @@ textarea {
     vertical-align: top;
 }
 
-.links a{
-    text-decoration:none;
-    font-size:15px;
-         
+.links{
+    height:30px;
 }
+
+
 .links:hover{
     background-color:#ddd;
-}
-.panel-body{
-    padding-left: 5px;
-
-}
-.panel-body ul{
-    padding-left:10px;
-
 }

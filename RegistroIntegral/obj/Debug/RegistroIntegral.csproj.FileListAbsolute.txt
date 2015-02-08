@@ -145,3 +145,4 @@ C:\Users\Owner\Documents\GitHub\RegistroIntegral\RegistroIntegral\bin\es\Microso
 C:\Users\Owner\Documents\GitHub\RegistroIntegral\RegistroIntegral\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 C:\Users\Owner\Documents\GitHub\RegistroIntegral\RegistroIntegral\obj\Debug\RegistroIntegral.dll
 C:\Users\Owner\Documents\GitHub\RegistroIntegral\RegistroIntegral\obj\Debug\RegistroIntegral.pdb
+C:\Users\Owner\Documents\GitHub\RegistroIntegral\RegistroIntegral\obj\Debug\RegistroIntegral.csprojResolveAssemblyReference.cache
