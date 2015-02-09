@@ -115,4 +115,7 @@ textarea {
 
 .links:hover{
     background-color:#ddd;
+    background-position: center center;
+    padding-bottom:5px;
+    padding-top:5px;
 }
