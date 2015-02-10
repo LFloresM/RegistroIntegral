@@ -11,7 +11,7 @@ namespace RegistroIntegral.Controllers
         // GET: Usuario
         public ActionResult Index()
         {
-            return View();
+            return PartialView("Usuario");
         }
     }
 }

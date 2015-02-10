@@ -11,7 +11,7 @@ namespace RegistroIntegral.Controllers
         // GET: Profesor
         public ActionResult Index()
         {
-            return View();
+            return PartialView("Profesor");
         }
     }
 }

@@ -110,12 +110,28 @@ textarea {
 
 .links{
     height:30px;
+
 }
 
 
 .links:hover{
     background-color:#ddd;
     background-position: center center;
-    padding-bottom:5px;
-    padding-top:5px;
+    padding-bottom:2px;
+    padding-top:2px;
+}
+
+.mant{
+    text-align:left;
+    font-size:large;
+    color:black;
+}
+.tabla{
+    padding-top:10px;
+    margin-left:25px;
+    margin-right:25px;
+    
+}
+.tablas{
+    text-align:center;
 }

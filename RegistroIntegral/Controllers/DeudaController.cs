@@ -6,12 +6,12 @@ using System.Web.Mvc;
 
 namespace RegistroIntegral.Controllers
 {
-    public class ModuloController : Controller
+    public class DeudaController : Controller
     {
-        // GET: Modulo
+        // GET: Deuda
         public ActionResult Index()
         {
-            return PartialView("Modulo");
+            return PartialView("Deuda");
         }
     }
 }

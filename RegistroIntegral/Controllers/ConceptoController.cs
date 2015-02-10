@@ -11,7 +11,7 @@ namespace RegistroIntegral.Controllers
         // GET: Concepto
         public ActionResult Index()
         {
-            return View();
+            return PartialView("Concepto");
         }
     }
 }

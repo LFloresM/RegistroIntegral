@@ -11,7 +11,7 @@ namespace RegistroIntegral.Controllers
         // GET: PlanEstudio
         public ActionResult Index()
         {
-            return View();
+            return PartialView("PlanEstudio");
         }
     }
 }

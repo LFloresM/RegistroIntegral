@@ -11,7 +11,7 @@ namespace RegistroIntegral.Controllers
         // GET: CompromisoPago
         public ActionResult Index()
         {
-            return View();
+            return PartialView("CompromisoPago");
         }
     }
 }

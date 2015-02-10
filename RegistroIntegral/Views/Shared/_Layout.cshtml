@@ -24,14 +24,14 @@
                 </button>
                 @Html.ActionLink("SIGA 1.0", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+            @*<div class="navbar-collapse collapse">*@
+                @*<ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                </ul>
+                </ul>*@
                 @Html.Partial("_LoginPartial")
-            </div>
+            @*</div>*@
         </div>
     </div>
     <div class="container body-content">

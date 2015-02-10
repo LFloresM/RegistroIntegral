@@ -11,7 +11,7 @@ namespace RegistroIntegral.Controllers
         // GET: HorarioAula
         public ActionResult Index()
         {
-            return View();
+            return PartialView("HorarioAula");
         }
     }
 }

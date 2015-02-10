@@ -11,7 +11,7 @@ namespace RegistroIntegral.Controllers
         // GET: RegistroMatricula
         public ActionResult Index()
         {
-            return View();
+            return PartialView("RegistroMatricula");
         }
     }
 }
