@@ -9,7 +9,10 @@ namespace RegistroIntegral
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/jquery-ui-{version}.js",
+                         "~/Scripts/jquery.unobtrusive-ajax.js"));
+
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -27,10 +30,15 @@ namespace RegistroIntegral
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
                      "~/Scripts/knockout-{version}.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/registro-integral").Include(
+                 "~/Scripts/registro-integral.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                    "~/Content/bootstrap.css",
-                    "~/Content/google-fonts.css",
-                    "~/Content/site.css"));
+                      "~/Content/bootstrap.css",
+                      "~/Content/font-awesome.css",
+                      "~/Content/google-fonts.css",
+                      "~/Content/helpers.css",
+                      "~/Content/site.css"));
 
 
             // Set EnableOptimizations to false for debugging. For more information,
