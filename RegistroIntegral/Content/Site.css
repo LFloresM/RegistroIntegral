@@ -149,14 +149,20 @@ textarea {
 
 }
 
-
 #mantenimiento-container .filterOption-buttoms .td-bottom-align td{
     vertical-align: bottom;
 }
-
 
 .tabla{
     padding-top:10px;
     margin-left:25px;
     margin-right:25px;
+}
+.boton1:hover{
+    background-color:#bf0022;
+
+}
+.boton2:hover{
+    background-color: #99CCFF;
+
 }
