@@ -44,21 +44,31 @@ textarea {
 }
 
 
+
 #menu-lateral-principal{
-    border-top:0px;
-    padding:15px;
+     padding:0px;
+}
+
+#MenuBarContainer{
+    padding:0px;
+    margin-top:20px;
 }
 
 
-#MenuBarContainer .panel-heading{
-    background-color:#526881;
-}
-
-#MenuBarContainer .panel-title a{
+#MenuBarContainer .accordion-heading a{
     color:whitesmoke;
-    font-size:20px;
+    font-size:19px;
     text-decoration:none;
     font-family: 'Nunito', sans-serif;
+    margin-left:30px;
+}
+
+
+
+#MenuBarContainer .accordion-inner{
+    padding:0px;
+    margin-top:10px;
+    margin-bottom:10px;
 }
 
 
@@ -103,16 +113,24 @@ textarea {
     vertical-align: top;
 }
 
-.links{
-    height:30px;
+
+#MenuBarContainer .links{
+    height:27px;
+}
+
+
+#MenuBarContainer .links a{
+    color:#edab5b;
+    font-size:16px;
+    font-family: 'Nunito', sans-serif;
+    text-decoration:none;
+    margin-left:50px;
+    padding:0px;
 }
 
 
 .links:hover{
-    background-color:#ddd;
-    background-position: center center;
-    padding-bottom:2px;
-    padding-top:1.5px;
+    background-color:#324658;
 }
 
 .mantenimiento-titulo h2{

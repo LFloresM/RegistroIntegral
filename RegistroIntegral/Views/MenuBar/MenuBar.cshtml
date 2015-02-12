@@ -1,78 +1,63 @@
 ﻿
 <div id="MenuBarContainer">
 
-    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="accordion" id="accordion2">
 
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Mantenimiento
-                    </a>
-                </h4>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                    Soporte <i class="fa fa-wrench fa-stack-1x"></i>
+                </a>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body" >
- 
-                    <div class="links"><a href="#" data-bind="click: profesorform"><span>Profesor</span></a></div>
-                    <div class="links"><a href="#" data-bind="click: alumnoform"><span>Alumno</span></a></div>
-                    <div class="links"><a href="#" data-bind="click: usuarioform"><span>Usuario</span></a></div>
-                    <div class="links"><a href="#" data-bind="click: aulaform"><span>Aula</span></a></div>
-                    <div class="links"><a href="#" data-bind="click: moduloform"><span>Modulo</span></a></div>
-                    <div class="links"><a href="#" data-bind="click: conceptoform"><span>Concepto</span></a></div>
-                    <div class="links"><a href="#" data-bind="click: planestudioform"><span>Plan de Estudio</span></a></div>
-                  
+            <div id="collapseOne" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                    <div class="links"><a href="#" data-bind="click: profesorform">Profesor</a></div>
+                    <div class="links"><a href="#" data-bind="click: alumnoform">Alumno</a></div>
+                    <div class="links"><a href="#" data-bind="click: usuarioform">Usuario</a></div>
+                    <div class="links"><a href="#" data-bind="click: aulaform">Aula</a></div>
+                    <div class="links"><a href="#" data-bind="click: moduloform">Modulo</a></div>
+                    <div class="links"><a href="#" data-bind="click: conceptoform">Concepto</a></div>
+                    <div class="links"><a href="#" data-bind="click: planestudioform">Plan de Estudio</a></div>
                 </div>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingTwo">
-                <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Procesos
-                    </a>
-                </h4>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                    Procesos <i class="fa fa-cogs fa-stack-1x"></i>
+                </a>
             </div>
-            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <div class="panel-body">
-                  
+            <div id="collapseTwo" class="accordion-body collapse">
+                <div class="accordion-inner">
                     <div class="links"><a href="#" data-bind="click: matriculaform"><span>Registro de Matricula</span></a></div>
                     <div class="links"><a href="#" data-bind="click: calificacionform"><span>Calificaciones</span></a></div>
-                    
                 </div>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingThree">
-                <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Horarios
-                    </a>
-                </h4>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                    Horarios <i class="fa fa-calendar fa-stack-1x"></i>
+                </a>
             </div>
-            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                <div class="panel-body">
-                   
+            <div id="collapseThree" class="accordion-body collapse">
+                <div class="accordion-inner">
                     <div class="links"><a href="#" data-bind="click: horarioporcursoform"><span>Horario por Curso</span></a></div>
                     <div class="links"><a href="#" data-bind="click: horarioporaulaform"><span>Horario por Aula</span></a></div>
-                 
                 </div>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingFour">
-                <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        Pagos
-                    </a>
-                </h4>
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                    Pagos <i class="fa fa-usd fa-stack-1x"></i>
+                </a>
             </div>
-            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                <div class="panel-body">
-                   
+            <div id="collapseFour" class="accordion-body collapse">
+                <div class="accordion-inner">
                     <div class="links"><a href="#" data-bind="click: pagoform"><span>Compromiso de Pago</span></a></div>
                     <div class="links"><a href="#" data-bind="click: deudaform"><span>Deudas Obtenidas</span></a></div>
-               
+
                 </div>
             </div>
         </div>
