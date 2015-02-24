@@ -1,12 +1,11 @@
 ﻿
 <div id="MenuBarContainer">
-
     <div class="accordion" id="accordion2">
 
         <div class="accordion-group">
             <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                    Soporte <i class="fa fa-wrench fa-stack-1x"></i>
+                    <i class="fa fa-wrench acordion-icon"></i> Soporte
                 </a>
             </div>
             <div id="collapseOne" class="accordion-body collapse in">
@@ -20,11 +19,11 @@
                     <div class="links"><a href="#" data-bind="click: showplanestudio">Plan de Estudio</a></div>
                 </div>
             </div>
-        </div>
+        </div> <br />
         <div class="accordion-group">
             <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                    Procesos <i class="fa fa-cogs fa-stack-1x"></i>
+                    <i class="fa fa-cogs acordion-icon"></i> Procesos
                 </a>
             </div>
             <div id="collapseTwo" class="accordion-body collapse">
@@ -33,11 +32,11 @@
                     <div class="links"><a href="#" data-bind="click: showcalificacion"><span>Calificaciones</span></a></div>
                 </div>
             </div>
-        </div>
+        </div> <br />
         <div class="accordion-group">
             <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                    Horarios <i class="fa fa-calendar fa-stack-1x"></i>
+                    <i class="fa fa-calendar acordion-icon"></i> Horarios
                 </a>
             </div>
             <div id="collapseThree" class="accordion-body collapse">
@@ -46,11 +45,11 @@
                     <div class="links"><a href="#" data-bind="click: showhorarioaula"><span>Horario por Aula</span></a></div>
                 </div>
             </div>
-        </div>
+        </div> <br />
         <div class="accordion-group">
             <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-                    Pagos <i class="fa fa-usd fa-stack-1x"></i>
+                    <i class="fa fa-credit-card acordion-icon"></i> Pagos
                 </a>
             </div>
             <div id="collapseFour" class="accordion-body collapse">
@@ -63,7 +62,6 @@
         </div>
 
     </div>
-
 </div>
 
 
@@ -72,5 +70,5 @@
     $(document).ready(function () {
         ko.applyBindings($('#MenuBarContainer')[0]);
     });
-   
+
 </script>

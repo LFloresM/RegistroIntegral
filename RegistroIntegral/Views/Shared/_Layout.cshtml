@@ -1,19 +1,27 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/knockout")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/registro-integral")
     @RenderSection("scripts", required: false)
 
 </head>
 <body>
+    @*data-bind=" css: {xs: riVM.viewport()=='xs', sm: riVM.viewport()=='sm', md: riVM.viewport()=='md', lg: riVM.viewport()=='lg'}">*@
+    <span id="viewport-sizes">
+        <span class="viewport visible-xs hidden-sm  hidden-md  hidden-lg ">xs</span>
+        <span class="viewport hidden-xs  visible-sm hidden-md  hidden-lg ">sm</span>
+        <span class="viewport hidden-xs  hidden-sm  visible-md hidden-lg ">md</span>
+        <span class="viewport hidden-xs  hidden-sm  hidden-md  visible-lg ">lg</span>
+    </span>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -25,12 +33,12 @@
                 @Html.ActionLink("SIGA 1.0", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             @*<div class="navbar-collapse collapse">*@
-                @*<ul class="nav navbar-nav">
+            @*<ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
                 </ul>*@
-                @Html.Partial("_LoginPartial")
+            @Html.Partial("_LoginPartial")
             @*</div>*@
         </div>
     </div>
@@ -38,7 +46,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            <p>By ITCallegari - Copyright 2015</p>
         </footer>
     </div>
 </body>

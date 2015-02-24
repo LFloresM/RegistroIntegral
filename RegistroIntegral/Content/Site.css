@@ -1,4 +1,6 @@
-﻿body {
+﻿YO
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -23,54 +25,38 @@ textarea {
     max-width: 280px;
 }
 
+
+#viewport-sizes {
+    display:none;  /*remark this out to show bootstap sizes*/
+}
+
+
 .contenedor-page{
     background-color:#495f74;
 
 }
 
 
-.header-sistema{
+.row.header-sistema{
     background-color:#1b2c3b;
     color:#989595;
     padding-left:20px;
     padding:10px;
     font-size:27px;
-}
-
-
-.cuerpo{
-    margin:0 auto;
-    height:600px;
+    padding-top:65px;
 }
 
 
 
 #menu-lateral-principal{
-    float:none;
      padding:0px;
-    
+     min-width:250px;
 }
+
 
 #MenuBarContainer{
     padding:0px;
     margin-top:20px;
-}
-
-
-#MenuBarContainer .accordion-heading a{
-    color:whitesmoke;
-    font-size:19px;
-    text-decoration:none;
-    font-family: 'Nunito', sans-serif;
-    margin-left:30px;
-}
-
-
-
-#MenuBarContainer .accordion-inner{
-    padding:0px;
-    margin-top:10px;
-    margin-bottom:10px;
 }
 
 
@@ -86,59 +72,106 @@ textarea {
     margin-bottom:15px;
 }
 
+
 #MenuBarContainer .panel-body a{
     margin-left:20px;
     text-decoration:none;
-}
 
-
-#MenuBarContainer .panel-body span{
-    color:#707c89;
-    font-size:16px;
-    font-family: 'Nunito', sans-serif;
 }
 
 
 #contenedor-principal{
     background-color:#dee3e8;
-    float:none;
-    
 }
 
 
-.container .row .cuerpo {
+.container .row .cuerpo{
+    margin:0 auto;
+    height:600px;
     display: table;
     width:100%;
 }
 
+
 .container .row .cuerpo [class*="col-"] {
-       
+    float: none;
     display: table-cell;
     vertical-align: top;
 }
 
 
+#MenuBarContainer .accordion-heading a{
+    color:#08224a;
+    font-size:19px;
+    text-decoration:none;
+    font-family: 'Nunito', sans-serif;
+    margin-left:30px;
+}
+
+
+#MenuBarContainer .accordion-heading a:hover{
+    color:#08224a;
+    text-shadow:2px 2px 10px white;
+}
+
+
+#MenuBarContainer .accordion-inner{
+    padding:0px;
+    margin-top:10px;
+    margin-bottom:10px;
+    border-bottom:1px solid #08224a;
+}
+
+
+.acordion-icon{
+     color:#305339;
+}
+
+
+.acordion-icon:hover{
+    color:#3ec629;
+    text-shadow:2px 2px 10px #9be296;
+    font-size:20px;
+    cursor:none;
+}
+
 
 #MenuBarContainer .links{
-    height:27px;
+    height: 2em;
+    position: relative           
+}
+
+
+#MenuBarContainer .links:hover{
+    background-color:#274157;
+    color:whitesmoke;
 }
 
 
 #MenuBarContainer .links a{
-    color:#edab5b;
-    font-size:16px;
+    color:lightcyan;
+    font-size:15px;
     font-family: 'Nunito', sans-serif;
     text-decoration:none;
-    margin-left:50px;
+    margin-left:60px;
     padding:0px;
+    position: absolute;               
+    top: 50%;                        
+    transform: translate(0, -50%);
+    width:100%;
+
 }
 
 
-.links:hover{
-    background-color:#324658;
+#MenuBarContainer .links a:hover{
+    color:white;
+    font-size:15px;
+    font-family: sans-serif;
+    text-shadow:2px 2px 15px white;
 }
 
-.mantenimiento-titulo h2 {
+
+.mantenimiento-titulo h2{
     text-align:left;
     font-family: 'Nunito', sans-serif;
 }
@@ -149,24 +182,31 @@ textarea {
     padding:10px;
 }
 
+
 .mantenimiento-tabla td{
     vertical-align:bottom;
 
 }
 
+
 #mantenimiento-container .filterOption-buttoms .td-bottom-align td{
     vertical-align: bottom;
 }
+
 
 .tabla{
     padding-top:10px;
     margin-left:25px;
     margin-right:25px;
 }
+
+
 .botondelete:hover{
     background-color:#bf0022;
 
 }
+
+
 .botonedit:hover{
     background-color: #99CCFF;
 
