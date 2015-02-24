@@ -63,11 +63,11 @@
                         <td style="vertical-align: bottom;">11-02-15</td>
                         <td style="vertical-align: bottom;">Si</td>
                         <td style="vertical-align: bottom;">
-                            <button type="button" class="btn btn-default btn-xs boton2" aria-label="left Align">
+                            <button type="button" class="btn btn-default btn-xs botonedit" aria-label="left Align">
                                 @*<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>*@
                                 <span><i class="fa fa-pencil-square-o fa-lg"></i></span>
                             </button>
-                            <button type="button" class="btn btn-default btn-xs boton1" aria-label="Left Align">
+                            <button type="button" class="btn btn-default btn-xs botondelete" aria-label="Left Align">
                                 @*<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>*@
                                 <span><i class="fa fa-trash-o fa-lg"></i></span>
                             </button>
@@ -78,7 +78,89 @@
             </table>
         </div>
     </div>
+    <div class=row>
+        <div class="col-lg-12">
+            <ul class="pagination">
+                <li class="disabled">
+                    <a href="#">&laquo;</a>
+                </li>
+                <li class="active">
+                    <a href="#">1 <span class="sr-only">(página actual)</span></a>
+                </li>
+                <li>
+                    <a href="#">2 <span class="sr-only">(página actual)</span></a>
+                </li>
+                <li>
+                    <a href="#">3 <span class="sr-only">(página actual)</span></a>
+                </li>
+                <li>
+                    <a href="#">4 <span class="sr-only">(página actual)</span></a>
+                </li>
+                <li>
+                    <a href="#">5 <span class="sr-only">(página actual)</span></a>
+                </li>
+                <li class="enable">
+                    <a href="#">&raquo;</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 class="modal-title"><i class="fa fa-user"></i> Nuevo Alumno</h3>
+    </div>
+
+    <div class="modal-body form-horizontal">
+        <div class="form-group">
+            <label class="col-lg-2 control-label text-right">Nombre:</label>
+            <div class="col-lg-4">
+                <input id="alumno_nombre" onkeypress="return letra(event)" onkeyup="this.value = this.value.toUpperCase();" type="text" class="form-control" placeholder="Ingrese Nombre" autofocus required>
+            </div>
+        </div>
+        <div class="form-group ">
+            <label class="col-lg-2 control-label">Nacimiento:</label>
+            <div class="col-lg-4">
+                <div class='input-group date' id='dtpfecha' data-date-format="DD/MM/YYYY">
+                    <input id="fechanac_alumno" type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-lg-2 control-label text-right">Apoderado:</label>
+            <div class="col-lg-4">
+                <input id="alumno_apoderado" type="text" class="form-control" placeholder="Ingrese Apoderado" autofocus required>
+            </div>
+        </div>
+        <div class="form-group ">
+            <label class="col-lg-2 control-label">Fecha:</label>
+            <div class="col-lg-4">
+                <div class='input-group date' id='dtpfecha' data-date-format="DD/MM/YYYY">
+                    <input id="fechaingreso_alumno" type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default botondelete" data-dismiss="modal"><i class="fa fa-times-circle"></i> Cerrar</button>
+        <button id="btnsave" type="submit" class="btn btn-primary"><i class="fa fa-floppy-o"></i> Guardar</button>
+    </div>
+
 
 </div>
+@*<script>
+    $(document).ready(function () {
+        $("#contenedor-principal .filtros-botones-container").load('/FiltroBotones');
+        });
+    
+</script>*@
 
 
