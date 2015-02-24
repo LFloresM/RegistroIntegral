@@ -46,9 +46,7 @@ textarea {
 
 
 #menu-lateral-principal{
-    float:none;
      padding:0px;
-    
 }
 
 #MenuBarContainer{
@@ -101,22 +99,19 @@ textarea {
 
 #contenedor-principal{
     background-color:#dee3e8;
-    float:none;
-    
 }
 
 
-.container .row .cuerpo {
+.container .row .cuerpo{
     display: table;
     width:100%;
 }
 
 .container .row .cuerpo [class*="col-"] {
-       
+    float: none;
     display: table-cell;
     vertical-align: top;
 }
-
 
 
 #MenuBarContainer .links{
@@ -138,7 +133,7 @@ textarea {
     background-color:#324658;
 }
 
-.mantenimiento-titulo h2 {
+.mantenimiento-titulo h2{
     text-align:left;
     font-family: 'Nunito', sans-serif;
 }
@@ -163,11 +158,11 @@ textarea {
     margin-left:25px;
     margin-right:25px;
 }
-.botondelete:hover{
+.boton1:hover{
     background-color:#bf0022;
 
 }
-.botonedit:hover{
+.boton2:hover{
     background-color: #99CCFF;
 
 }
