@@ -165,6 +165,7 @@
     <Compile Include="Controllers\CompromisoPagoController.cs" />
     <Compile Include="Controllers\ConceptoController.cs" />
     <Compile Include="Controllers\DeudaController.cs" />
+    <Compile Include="Controllers\FiltroBotonesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HorarioAulaController.cs" />
     <Compile Include="Controllers\HorarioCursoController.cs" />
@@ -267,6 +268,7 @@
     <Content Include="Views\PlanEstudio\PlanEstudio.cshtml" />
     <Content Include="Views\RegistroMatricula\RegistroMatricula.cshtml" />
     <Content Include="Views\Deuda\Deuda.cshtml" />
+    <Content Include="Views\FiltroBotones\FiltroBotones.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

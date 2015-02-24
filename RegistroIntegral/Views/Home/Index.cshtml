@@ -5,16 +5,23 @@
         </div>
 
         <div class="row">
-            <div class="cuerpo">
+            
+                <div class="cuerpo">
 
-                <div id="menu-lateral-principal" class="col-md-3 col-lg-3">
+                       <div id="menu-lateral-principal" class="col-md-3 col-lg-3">
+
+                        </div>
+
+                        <div id="contenedor-principal" class="col-md-9 col-lg-9">
+                            @*<div class="filtros-botones-container">
+
+                            </div>*@
+
+                        </div>
+                    
 
                 </div>
-
-                <div id="contenedor-principal" class="col-md-9 col-lg-9">
-
-                </div>
-            </div>
+            
         </div>
     </div>
 </div>
@@ -30,6 +37,10 @@
         $("#menu-lateral-principal").load('/MenuBar');
 
     });
+    //$(document).ready(function () {
+    //    $("#botones").load('/FiltroBotones');
+
+    //});
     
 
 
@@ -40,43 +51,43 @@
     function loginform() {
         $("#contenedor-principal").load('/Account/Login')
     }
-    function profesorform() {
+    function showprofesor() {
         $("#contenedor-principal").load('/Profesor')
     }
-    function alumnoform() {
+    function showalumno() {
         $("#contenedor-principal").load('/Alumno')
     }
-    function usuarioform() {
+    function showusuario() {
         $("#contenedor-principal").load('/Usuario')
     }
-    function aulaform() {
+    function showaula() {
         $("#contenedor-principal").load('/Aula')
     }
-    function moduloform() {
+    function showmodulo() {
         $("#contenedor-principal").load('/Modulo')
     }
-    function conceptoform() {
+    function showconcepto() {
         $("#contenedor-principal").load('/Concepto')
     }
-    function planestudioform() {
+    function showplanestudio() {
         $("#contenedor-principal").load('/PlanEstudio')
     }
-    function matriculaform() {
+    function showmatricula() {
         $("#contenedor-principal").load('/RegistroMatricula')
     }
-    function calificacionform() {
+    function showcalificacion() {
         $("#contenedor-principal").load('/Calificacion')
     }
-    function horarioporcursoform() {
+    function showhorariocurso() {
         $("#contenedor-principal").load('/HorarioCurso')
     }
-    function horarioporaulaform() {
+    function showhorarioaula() {
         $("#contenedor-principal").load('/HorarioAula')
     }
-    function pagoform() {
+    function showpago() {
         $("#contenedor-principal").load('/CompromisoPago')
     }
-    function deudaform() {
+    function showdeuda() {
         $("#contenedor-principal").load('/Deuda')
     }
 
