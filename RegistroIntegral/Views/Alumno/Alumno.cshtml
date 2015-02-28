@@ -9,9 +9,63 @@
 
     <div class="row filterOption-buttoms">
         <div class="col-lg-4 text-left">
-            <button type="button" class="btn btn-success btn-sm">Agregar</button>
-            <button type="button" class="btn btn-warning btn-sm">Imprimir</button>
+            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal">Agregar  <i class="fa fa-plus"></i></button>
+            <button type="button" class="btn btn-warning btn-sm">Imprimir <i class="fa fa-print"></i></button>
         </div>
+        
+            <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" id="myModal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content formcenter">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h3 class="modal-title"><i class="fa fa-user"></i> Nuevo Alumno</h3>
+                        </div>
+                        <div class="modal-body form-horizontal">
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label text-right">Nombre:</label>
+                                <div class="col-lg-10">
+                                    <input id="alumno_nombre" onkeypress="return letra(event)" onkeyup="this.value = this.value.toUpperCase();" type="text" class="form-control" placeholder="Ingrese Nombre" autofocus required>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label class="col-lg-2 control-label">Nacimiento:</label>
+                                <div class="col-lg-10">
+                                    <div class='input-group date' id='dtpfecha' data-date-format="DD/MM/YYYY">
+                                        <input id="fechanac_alumno" type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="fa fa-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">Apoderado:</label>
+                                <div class="col-lg-10">
+                                    <input id="alumno_apoderado" type="text" class="form-control" placeholder="Ingrese Apoderado" autofocus required>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <label class="col-lg-2 control-label">Fecha Ingreso:</label>
+                                <div class="col-lg-10">
+                                    <div class='input-group date' id='dtpfecha' data-date-format="DD/MM/YYYY">
+                                        <input id="fechaingreso_alumno" type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                            <span class="fa fa-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times-circle"></i> Cerrar</button>
+                            <button id="btnsave" type="submit" class="btn btn-primary"><i class="fa fa-floppy-o"></i> Guardar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+      
+       
         <div class="col-lg-4">
 
         </div>
@@ -35,7 +89,7 @@
 
         </div>
     </div>
-
+    
 
     <div class="row">
         <!-- Table -->
@@ -104,58 +158,9 @@
                 </li>
             </ul>
         </div>
-    </div>
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3 class="modal-title"><i class="fa fa-user"></i> Nuevo Alumno</h3>
-    </div>
+    </div>   
 
-    <div class="modal-body form-horizontal">
-        <div class="form-group">
-            <label class="col-lg-2 control-label text-right">Nombre:</label>
-            <div class="col-lg-4">
-                <input id="alumno_nombre" onkeypress="return letra(event)" onkeyup="this.value = this.value.toUpperCase();" type="text" class="form-control" placeholder="Ingrese Nombre" autofocus required>
-            </div>
-        </div>
-        <div class="form-group ">
-            <label class="col-lg-2 control-label">Nacimiento:</label>
-            <div class="col-lg-4">
-                <div class='input-group date' id='dtpfecha' data-date-format="DD/MM/YYYY">
-                    <input id="fechanac_alumno" type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="fa fa-calendar"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-lg-2 control-label text-right">Apoderado:</label>
-            <div class="col-lg-4">
-                <input id="alumno_apoderado" type="text" class="form-control" placeholder="Ingrese Apoderado" autofocus required>
-            </div>
-        </div>
-        <div class="form-group ">
-            <label class="col-lg-2 control-label">Fecha:</label>
-            <div class="col-lg-4">
-                <div class='input-group date' id='dtpfecha' data-date-format="DD/MM/YYYY">
-                    <input id="fechaingreso_alumno" type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="fa fa-calendar"></span>
-                    </span>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
-    <div class="modal-footer">
-        <button type="button" class="btn btn-default botondelete" data-dismiss="modal"><i class="fa fa-times-circle"></i> Cerrar</button>
-        <button id="btnsave" type="submit" class="btn btn-primary"><i class="fa fa-floppy-o"></i> Guardar</button>
-    </div>
-
-
-</div>
+  </div>
 @*<script>
     $(document).ready(function () {
         $("#contenedor-principal .filtros-botones-container").load('/FiltroBotones');
