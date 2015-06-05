@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7b70ef4e825d43949aca1d2e52c1a628" Name="Diagram1">
+        <EntityTypeShape EntityType="RegistroIntegralModel.Administrador" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Alumno" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Aula" Width="1.5" PointX="0.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Calificacion" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Concepto" Width="1.5" PointX="6" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Costo" Width="1.5" PointX="8.25" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Det_Pago" Width="1.5" PointX="7.5" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Detalle_Plan" Width="1.5" PointX="3" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Deuda" Width="1.5" PointX="8.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Horario" Width="1.5" PointX="3" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Matricula" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Modulo" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Pago" Width="1.5" PointX="5.25" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Persona" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Plan_Estudio" Width="1.5" PointX="0.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Profesor" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Profesor_Horario" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Programacion" Width="1.5" PointX="0.75" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Tipo_Usuario" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RegistroIntegralModel.Usuario" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Administrador_Persona" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Alumno_Persona" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Calificacion_Alumno" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Deuda_Alumno" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Matricula_Alumno" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Pago_Alumno" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Horario_Aula" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Calificacion_Modulo" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Costo_Concepto" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Det_Pago_Concepto1" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Deuda_Concepto" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Det_Pago_Pago1" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Detalle_Plan_Plan_Estudio1" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Detalle_Plan_Programacion1" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Horario_Programacion" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Profesor_Horario_Horario" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Matricula_Modulo" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Programacion_Modulo" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Profesor_Persona" ManuallyRouted="false" />
+        <AssociationConnector Association="RegistroIntegralModel.FK_Profesor_Horario_Profesor" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

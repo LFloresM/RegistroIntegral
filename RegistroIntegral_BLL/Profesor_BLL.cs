@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using RegistroIntegral_DAL;
+
+namespace RegistroIntegral_BLL
+{
+    public class Profesor_BLL
+    {
+        Profesor_DAL pro = new Profesor_DAL();
+
+
+        public class Profesor
+        {
+            public int Prof_Id { get; set; }
+            public string Per_Id { get; set; }
+            public string Prof_Rpm { get; set; }
+            public string Prof_Nextel { get; set; }
+            public string Prof_Especialidad { get; set; }
+
+        }
+
+
+        public DataTable ListarProfesores()
+        {
+            return pro.ListarProfesores();
+        }
+
+
+    }
+}

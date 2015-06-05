@@ -1,107 +1,41 @@
-﻿<div class="contenedor-page">
-    <div class="container">
-        <div class="row header-sistema">
-            <span>Sistema Integrado de Gestion Academica</span>
-        </div>
+﻿<div class="dashboard">
 
-        <div class="row">
-            
+    <div class="contenedor-page">
+        <div class="container">
+            <div class="row header-sistema">
+                <span>Sistema Integrado de Gestion Academica</span>
+            </div>
+
+            <div class="row">
+
                 <div class="cuerpo">
 
-                       <div id="menu-lateral-principal" class="col-sm-3 col-lg-3">
+                    <div id="menu-lateral-principal" class="col-sm-3 col-lg-3">
 
-                        </div>
+                    </div>
 
-                        <div id="contenedor-principal" class="col-sm-9 col-lg-9">
-                            @*<div class="filtros-botones-container">
+                    <div id="contenedor-principal" class="col-sm-9 col-lg-9">
+                        @*<div class="filtros-botones-container">
 
                             </div>*@
 
-                        </div>
-                    
+                    </div>
+
 
                 </div>
-            
+
+            </div>
         </div>
     </div>
 </div>
+
+
 <script>
 
-    
-    //$(document).ready(function () {
-    //    $("#menu-lateral-principal").load('http://dev-registrointegral.com/MenuBar');
-
-    //});
-
     $(document).ready(function () {
-        $("#menu-lateral-principal").load('/MenuBar');
-
+            
+        if (loVM.viewport() == 'xs') loVM.withMenu(false);
+            loVM.mainContainerType('dashboard');
     });
-    //$(document).ready(function () {
-    //    $("#botones").load('/FiltroBotones');
-
-    //});
-    
-
-
-    //function loginform() {
-    //    $("#contenedor-principal").load('http://dev-registrointegral.com/Account/Login')
-    //}
-
-    function loginform() {
-        $("#contenedor-principal").load('/Account/Login')
-    }
-    function showprofesor() {
-        $("#contenedor-principal").load('/Profesor')
-    }
-    function showalumno() {
-        $("#contenedor-principal").load('/Alumno')
-    }
-    function showusuario() {
-        $("#contenedor-principal").load('/Usuario')
-    }
-    function showaula() {
-        $("#contenedor-principal").load('/Aula')
-    }
-    function showmodulo() {
-        $("#contenedor-principal").load('/Modulo')
-    }
-    function showconcepto() {
-        $("#contenedor-principal").load('/Concepto')
-    }
-    function showplanestudio() {
-        $("#contenedor-principal").load('/PlanEstudio')
-    }
-    function showmatricula() {
-        $("#contenedor-principal").load('/RegistroMatricula')
-    }
-    function showcalificacion() {
-        $("#contenedor-principal").load('/Calificacion')
-    }
-    function showhorariocurso() {
-        $("#contenedor-principal").load('/HorarioCurso')
-    }
-    function showhorarioaula() {
-        $("#contenedor-principal").load('/HorarioAula')
-    }
-    function showpago() {
-        $("#contenedor-principal").load('/CompromisoPago')
-    }
-    function showdeuda() {
-        $("#contenedor-principal").load('/Deuda')
-    }
-
-
-   
-    //function zonaprintOficina() {
-    //    $("#contenedor-principal").load('/Alumno')
-    //}
-    
-    //$('#myTab a').click(function (e) {
-    //    e.preventDefault()
-    //    $(this).tab('show')
-    //})
-
-
 
 </script>

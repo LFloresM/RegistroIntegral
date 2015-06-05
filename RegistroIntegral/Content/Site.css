@@ -230,3 +230,61 @@ textarea {
        
       
 }
+
+
+
+
+
+/*MENU*/
+
+
+.withMenuIconsOnly .paf-menu-item.active:before,
+.withMenu .paf-menu-item.active:before {
+    color: #eee;
+    content: "";
+    display: block;
+    font-family: FontAwesome;
+    font-size: 20px;
+    height: 27px;
+    line-height: normal;
+    position:absolute;
+    right: -30px;
+    width: 27px;
+}
+
+.withMenuIconsOnly ul.menuMain > li:nth-child(2).paf-menu-item.active:before,
+.withMenu ul.menuMain > li:nth-child(2).paf-menu-item.active:before{
+ right: -20px;
+}
+
+.menu-icons-only {
+    bottom: 20px;
+    color: #bbb;
+    position: absolute;
+    right: 15px;
+}
+
+.withMenuIconsOnly .menuMain {
+    width: 50px;
+}
+
+.withMenuIconsOnly .menuMain a.toggle-submenu {
+    display:none;
+}
+
+.withMenuIconsOnly .menuMain .li-seperator,
+.withMenuIconsOnly .menuMain .li-seperator-lower {
+       width:50px;
+}
+
+.inbox #menuSlide:hover .paf-menu-item.active:before {
+    color: #FFF;
+}
+
+#menuSlide.withMenuIconsOnly .paf-menu-item.active:before {
+right:-20px;
+}
+
+#menuSlide .li-seperator-lower.paf-menu-item.active:before {
+    right: -20px;
+}

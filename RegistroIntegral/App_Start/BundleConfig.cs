@@ -30,7 +30,13 @@ namespace RegistroIntegral
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
                      "~/Scripts/knockout-{version}.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/registro-integral").Include(
+            bundles.Add(new ScriptBundle("~/bundles/layout").Include(
+                 "~/Scripts/custom/layout/layout.js",
+                 "~/Scripts/custom/layout/layoutDTOs.js",
+                  "~/Scripts/custom/layout/layoutAjax.js"
+           ));
+
+            bundles.Add(new ScriptBundle("~/bundles/registrointegral").Include(
                  "~/Scripts/registro-integral.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

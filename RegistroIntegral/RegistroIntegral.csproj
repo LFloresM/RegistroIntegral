@@ -15,7 +15,7 @@
     <AssemblyName>RegistroIntegral</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -39,10 +39,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -106,12 +116,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -159,30 +163,103 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AlumnoController.cs" />
-    <Compile Include="Controllers\AulaController.cs" />
-    <Compile Include="Controllers\CalificacionController.cs" />
-    <Compile Include="Controllers\CompromisoPagoController.cs" />
-    <Compile Include="Controllers\ConceptoController.cs" />
-    <Compile Include="Controllers\DeudaController.cs" />
     <Compile Include="Controllers\FiltroBotonesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\HorarioAulaController.cs" />
-    <Compile Include="Controllers\HorarioCursoController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MenuBarController.cs" />
-    <Compile Include="Controllers\ModuloController.cs" />
-    <Compile Include="Controllers\PlanEstudioController.cs" />
     <Compile Include="Controllers\ProfesorController.cs" />
-    <Compile Include="Controllers\RegistroMatriculaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="DAL\Administrador.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Alumno.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Aula.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Calificacion.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Concepto.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Costo.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Detalle_Plan.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Det_Pago.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Deuda.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Horario.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Matricula.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Modulo.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Pago.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Persona.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Plan_Estudio.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Profesor.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Profesor_Horario.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Programacion.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\RegistroIntegralContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistroIntegralContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\RegistroIntegralContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\RegistroIntegralContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegistroIntegralContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Tipo_Usuario.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Usuario.cs">
+      <DependentUpon>RegistroIntegralContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\SqlHelper.cs" />
+    <Compile Include="Helpers\StringHelper.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Content Include="Profesor_BLL.cs.txt" />
+    <Content Include="Profesor_DAL.cs.txt" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -205,7 +282,29 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\FontAwesome.otf" />
+    <EntityDeploy Include="DAL\RegistroIntegralContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>RegistroIntegralContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DAL\RegistroIntegralContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RegistroIntegralContext.edmx</DependentUpon>
+      <LastGenOutput>RegistroIntegralContext.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\RegistroIntegralContext.edmx.diagram">
+      <DependentUpon>RegistroIntegralContext.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAL\RegistroIntegralContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>RegistroIntegralContext.edmx</DependentUpon>
+      <LastGenOutput>RegistroIntegralContext.cs</LastGenOutput>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Custom\Layout\layout.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -218,8 +317,11 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\registro-integral.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -255,20 +357,20 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\MenuBar\MenuBar.cshtml" />
-    <Content Include="Views\Alumno\Alumno.cshtml" />
-    <Content Include="Views\Aula\Aula.cshtml" />
-    <Content Include="Views\Concepto\Concepto.cshtml" />
-    <Content Include="Views\Modulo\Modulo.cshtml" />
-    <Content Include="Views\Usuario\Usuario.cshtml" />
-    <Content Include="Views\Profesor\Profesor.cshtml" />
-    <Content Include="Views\Calificacion\Calificacion.cshtml" />
-    <Content Include="Views\CompromisoPago\CompromisoPago.cshtml" />
-    <Content Include="Views\HorarioAula\HorarioAula.cshtml" />
-    <Content Include="Views\HorarioCurso\HorarioCurso.cshtml" />
-    <Content Include="Views\PlanEstudio\PlanEstudio.cshtml" />
-    <Content Include="Views\RegistroMatricula\RegistroMatricula.cshtml" />
-    <Content Include="Views\Deuda\Deuda.cshtml" />
+    <Content Include="Views\Alumno\Alumno2.cshtml" />
+    <Content Include="Views\Aula\Aula2.cshtml" />
+    <Content Include="Views\Concepto\Concepto2.cshtml" />
+    <Content Include="Views\Modulo\Modulo2.cshtml" />
+    <Content Include="Views\Usuario\Usuario2.cshtml" />
+    <Content Include="Views\Calificacion\Calificacion2.cshtml" />
+    <Content Include="Views\CompromisoPago\CompromisoPago2.cshtml" />
+    <Content Include="Views\HorarioAula\HorarioAula2.cshtml" />
+    <Content Include="Views\HorarioCurso\HorarioCurso2.cshtml" />
+    <Content Include="Views\PlanEstudio\PlanEstudio2.cshtml" />
+    <Content Include="Views\RegistroMatricula\RegistroMatricula2.cshtml" />
+    <Content Include="Views\Deuda\Deuda2.cshtml" />
     <Content Include="Views\FiltroBotones\FiltroBotones.cshtml" />
+    <Content Include="Views\Profesor\Profesor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -279,6 +381,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -298,7 +403,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>16835</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:21142/</IISUrl>
+          <IISUrl>http://dev-registrointegral.com/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -7,21 +7,29 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/bundles/knockout")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/registro-integral")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/layout")
+    @Scripts.Render("~/bundles/registrointegral")
     @RenderSection("scripts", required: false)
 
 </head>
-<body>
-    @*data-bind=" css: {xs: riVM.viewport()=='xs', sm: riVM.viewport()=='sm', md: riVM.viewport()=='md', lg: riVM.viewport()=='lg'}">*@
+<body data-bind=" css: {xxs: loVM.viewport()=='xxs', xs:  loVM.viewport()=='xs', sm:  loVM.viewport()=='sm', md:  loVM.viewport()=='md', lg:  loVM.viewport()=='lg'}">
     <span id="viewport-sizes">
         <span class="viewport visible-xs hidden-sm  hidden-md  hidden-lg ">xs</span>
         <span class="viewport hidden-xs  visible-sm hidden-md  hidden-lg ">sm</span>
         <span class="viewport hidden-xs  hidden-sm  visible-md hidden-lg ">md</span>
         <span class="viewport hidden-xs  hidden-sm  hidden-md  visible-lg ">lg</span>
     </span>
+
+    <script>
+    $(document).ready(function () {
+        loVM = new layoutViewModel();
+        ko.applyBindings(loVM);
+    });
+    </script>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -38,17 +46,60 @@
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
                 </ul>*@
-            @Html.Partial("_LoginPartial")
+            @*@Html.Partial("_LoginPartial")*@
             @*</div>*@
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
+
+    <div class="container body-content" data-bind="css: loVM.mainContainerType()">
+        <div id="rightSlide" data-bind="css: {'withRightSlide': loVM.withRightSlide}"></div>
+        <div id="menuSlide" data-bind="css: {'withMenu': loVM.withMenu, 'withMenuOverlay': loVM.withMenuOverlay,'withMenuIconsOnly': loVM.withMenuIconsOnly}">
+            <div data-bind="template: 'menuMain'"></div>
+            <div id="MenuMainVButton" class="pointer" data-bind="click: loVM.vMenuToggleByOverlay"></div>
+            <div style="height:100%" data-bind="if: loVM.withMenu">
+                <div class="pull-right menu-icons-only pointer" data-bind="click:loVM.iconsOnlyToggle"><i class='fa  fa-lg' data-bind="css: {'fa-arrow-circle-left': loVM.withMenuIconsOnly() == false, 'fa-arrow-circle-right': loVM.withMenuIconsOnly() == true}"></i> </div>
+            </div>
+        </div>
+        <div class="header-bar" style="padding-left:10px;">
+            <div class="header-bar-right" data-bind="css: {'withMenu': loVM.withMenu,'withMenuIconsOnly': loVM.withMenuIconsOnly,  'withMenuOverlay': loVM.withMenuOverlay}">
+                <div class=" row">
+                    <div class=" col-xs-6 col-sm-7">
+                        <div data-bind="foreach: loVM.breadCrumbs">
+                            <span><a data-bind="attr: {href: url}"><span data-bind="text:name"></span></a></span>
+                        </div>
+                    </div>
+                    <div class=" col-xs-5">
+                        <div class="text-right navbar-brand-label-outer">
+                            @Html.ActionLink("Registro Integral", "Index", "Home", new { area = "" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mainContainer" data-bind="css: {'withMenuOverlay': loVM.withMenuOverlay,'withMenu': loVM.withMenu,'withMenuIconsOnly': loVM.withMenuIconsOnly, 'inbox': loVM.mainContainerType() == 'inbox'}">
+            @RenderBody()
+        </div>
         <hr />
         <footer>
             <p>By ITCallegari - Copyright 2015</p>
-             
+
         </footer>
     </div>
 </body>
 </html>
+
+
+<script type="text/html" id="menuMain">
+    <ul class="nav navbar-nav menuMain">
+        
+        <li id="paf-menu-item-9" data-bind="css: {'active': loVM.selectMenuItemNumber() == 9 }" class="paf-menu-item" onclick="inboxPaf(); setActiveItem(9);" style="margin:70px">
+            <div class="row">
+                <div class="pull-left menuTooltip" data-toggle="tooltip" data-placement="right" title="PAF Center">
+                    <span><a href='#'><i class="fa fa-users"></i><span>Profesor</span></a></span>
+                </div>
+            </div>
+        </li>
+       
+    </ul>
+
+</script>
